@@ -20,6 +20,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func clkBtn(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+        vc.img = UIImage(named: "img")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
